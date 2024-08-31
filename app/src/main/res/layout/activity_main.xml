@@ -1,0 +1,312 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_above="@+id/bottom_btns"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:id="@+id/main_layout">
+        <!--App Name Logo-->
+        <LinearLayout
+            android:id = "@+id/app_logo_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity ="center">
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_foreground"
+                android:contentDescription="Droplet Logo"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Droplet"
+                android:textAllCaps="true"
+                android:textSize="38sp"
+                android:textStyle="bold" />
+         </LinearLayout>
+         <!-- Next scheduled timer -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/next_timer_card"
+            android:layout_below="@+id/app_logo_title"
+            android:layout_marginTop="20dp"
+            android:clickable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/next_timer_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Consider drinking at around:"
+                    style = "@style/TextAppearance.Material3.LabelLarge"
+                    android:fontFamily="sans-serif"
+                    android:layout_gravity="center"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/sched_timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textAllCaps="true"
+                    android:textFontWeight="1000"
+                    android:textSize="64sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <!--Greeting User-->
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/next_timer_card"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:text="Hi, [User's Name]"
+            android:fontFamily="sans-serif"
+            android:textStyle="normal"
+            android:textSize="32sp"/>
+        <!--Glass Size Display-->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/glass_size_card"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_below="@id/tv_greeting"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:clickable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_glass_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You usually drink:"
+                    style="@style/TextAppearance.Material3.LabelMedium"
+                    android:layout_centerHorizontal="true"/>
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_glass_size"
+                    android:layout_below="@id/tv_glass_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="90dp"
+                    android:text="[Glass size] ml"
+                    style="@style/GlassSizeText."
+                    android:layout_centerInParent="true"/>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieGlassBgrAnimationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tv_glass_size"
+                    android:layout_gravity="bottom"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="Water-wave-bgr.json"
+                    app:lottie_loop="true" />
+             </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/glass_size_card"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="44dp"
+            android:layout_marginBottom="6dp"
+            android:clickable="true">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottieWaterBgrAnimationView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:lottie_fileName="Water-Stats-animation.json"
+                    android:layout_gravity="center"
+                    app:lottie_loop="true"
+                    app:lottie_autoPlay="true"
+                    android:visibility="visible"
+                    android:scaleType="centerCrop"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_user_stats_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Your stats"
+                        android:layout_gravity="top|center"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textSize="32sp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_user_stats_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Weight: [User's weight] kg"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_user_stats_total_water"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Recommended daily intake: [User's total water intake] ml"
+                        android:layout_gravity="center"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="36dp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_user_stats_wake_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="You Wake up at: 00:00am"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="18sp"
+                        android:drawableStart="@drawable/wakeupicon"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_user_stats_bed_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="You go to bed at: 00:00pm"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        app:emojiCompatEnabled="true"
+                        android:textSize="18sp"
+                        android:drawableStart="@drawable/sleepicon"/>
+                    <com.google.android.material.divider.MaterialDivider
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tv_user_stats_disclaimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Tips"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="32sp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="If you are working out, drink more than the recommended amount"
+                        android:layout_gravity="center"
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="When it's hot outside you also might want to drink more as well\n"
+                        android:layout_gravity="center"
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="This app is only meant to provide a baseline for your water drinking habits\n"
+                        android:layout_gravity="center"
+                        android:textStyle="normal"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </RelativeLayout>
+</ScrollView>
+<!--Bottom buttons-->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottom_btns"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:layout_centerInParent="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginRight="60dp"
+                app:cornerRadius="25dp"
+                android:layout_gravity="start"
+                android:text="Edit"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="true"
+                app:icon="@drawable/editicon"
+                app:iconGravity="textStart"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:fontFamily="sans-serif"
+                android:text="Theme"
+                android:layout_gravity="end"
+                android:textAllCaps="true"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="25dp"
+                app:icon="@drawable/themesicon"
+                app:iconGravity="textStart" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

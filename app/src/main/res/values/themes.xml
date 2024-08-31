@@ -1,0 +1,116 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WaterReminderApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="android:colorBackground">@color/colorBackgroundLight</item>
+        <item name="colorSurface">@color/colorSurface</item>
+        <item name="colorOnPrimary">@color/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/colorOnSecondary</item>
+        <item name="colorOnBackground">@color/colorOnBackground</item>
+        <item name="colorOnSurface">@color/colorOnSurface</item>
+        <item name="colorError">@color/colorError</item>
+        <item name="materialCardViewStyle">@style/CardView.</item>
+        <item name="textInputOutlinedStyle">@style/InputField.</item>
+        <item name="materialButtonStyle">@style/Button.</item>
+        <item name="lottie_colorFilter">@color/colorPrimary</item>
+        <item name="android:timePickerStyle">@style/TimePicker.Base</item>
+        <item name="android:textViewStyle">@style/TextViewIconStyle.</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+    <style name="CardView." parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">#B6F5F7</item>
+        <item name="cardCornerRadius">25dp</item>
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+    <style name="Button." parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorSecondary</item>
+        <item name="elevation">16dp</item>
+        <item name="android:backgroundTintMode">screen</item>
+        <item name="rippleColor">@color/colorPrimaryVariant</item>
+        <item name="android:shadowColor">@color/black_color</item>
+        <item name="android:shadowRadius">10</item>
+        <item name="android:shadowDy">2</item>
+        <item name="android:textColor">@color/colorSurface</item>
+        <item name="iconTint">@color/colorSurface</item>
+    </style>
+    <style name="GlassSizeText." parent="Widget.MaterialComponents.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">sans-serif"</item>
+     </style>
+    <style name="InputField." parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/colorSurface</item>
+        <item name="boxStrokeColor">@color/colorSecondary</item>
+    </style>
+
+    <style name="TimePicker.Base" parent="Widget.MaterialComponents.TimePicker">
+        <item name="android:numbersBackgroundColor">@color/colorSurface</item>
+        <item name="android:background">@drawable/shiny_gradient_background</item>
+        <item name="android:headerBackground">@color/colorPrimary</item>
+        <item name="android:numbersInnerTextColor">@color/colorSurface</item>
+        <item name="android:numbersTextColor">@color/colorOnSecondary</item>
+        <item name="android:numbersSelectorColor">@color/colorPrimary</item>
+        <item name="android:headerAmPmTextAppearance">@style/TextAppearance.Material3.MaterialTimePicker.Title</item>
+        <item name="android:headerTimeTextAppearance">@style/TextAppearance.Material3.MaterialTimePicker.Title</item>
+    </style>
+    <style name="TextViewIconStyle." parent="Widget.MaterialComponents.TextView">
+        <item name="android:drawableTint">@color/colorSecondary</item>
+    </style>
+    <style name="Theme.WaterReminderApp" parent="Base.Theme.WaterReminderApp" />
+
+<!--Dynamic color day-->
+        <style name="MaterialYou" parent="ThemeOverlay.Material3.DynamicColors.DayNight">
+            <item name="materialCardViewStyle">@style/CardView.Dynamic</item>
+            <item name="textInputOutlinedStyle">@style/InputField.Dynamic</item>
+            <item name="materialButtonStyle">@style/Button.Dynamic</item>
+            <item name="android:textViewStyle">@style/DynamicTextViewStyle</item>
+            <item name="lottie_colorFilter">@color/material_dynamic_primary70</item>
+            <item name="android:colorBackground">@color/material_dynamic_tertiary90</item>
+            <item name="actionBarStyle">@style/Theme.Design.NoActionBar</item>
+            <item name="android:timePickerStyle">@style/DynamicTimePickerStyle</item>
+            <item name="android:statusBarColor">@android:color/transparent</item>
+            <item name="android:navigationBarColor">@android:color/transparent</item>
+        </style>
+
+        <style name="CardView.Dynamic" parent="Widget.MaterialComponents.CardView">
+            <item name="cardBackgroundColor">@color/material_dynamic_secondary90</item>
+            <item name="cardCornerRadius">25dp</item>
+            <item name="strokeColor">@android:color/transparent</item>
+            <item name="strokeWidth">0dp</item>
+            <item name="android:textColor">@color/material_dynamic_neutral_variant30</item>
+        </style>
+
+        <style name="Button.Dynamic" parent="Widget.MaterialComponents.Button">
+            <item name="backgroundTint">@color/material_dynamic_primary70</item>
+            <item name="elevation">16dp</item>
+            <item name="android:backgroundTintMode">screen</item>
+            <item name="rippleColor">@color/material_dynamic_primary95</item>
+            <item name="android:textColor">@color/material_dynamic_neutral_variant20</item>
+            <item name="iconTint">@color/material_dynamic_secondary20</item>
+        </style>
+
+        <style name="InputField.Dynamic" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <item name="boxBackgroundColor">@color/material_dynamic_neutral80</item>
+            <item name="boxStrokeColor">@color/material_dynamic_secondary70</item>
+        </style>
+        <style name ="DynamicTextViewStyle" parent="Widget.MaterialComponents.TextView">
+            <item name="android:textColor">@color/material_dynamic_neutral_variant40</item>
+            <item name="android:drawableTint">@color/material_dynamic_primary30</item>
+        </style>
+    <style name="DynamicTimePickerStyle" parent="Widget.MaterialComponents.TimePicker">
+        <item name="android:numbersBackgroundColor">@color/material_dynamic_secondary80</item>
+        <item name="android:background">@color/material_dynamic_neutral80</item>
+        <item name="android:headerBackground">@color/material_dynamic_primary70</item>
+        <item name="android:numbersInnerTextColor">@color/material_dynamic_neutral_variant70</item>
+        <item name="android:numbersTextColor">@color/material_dynamic_neutral_variant30</item>
+        <item name="android:numbersSelectorColor">@color/material_dynamic_primary70</item>
+        <item name="android:headerAmPmTextAppearance">@style/TextAppearance.Material3.MaterialTimePicker.Title</item>
+        <item name="android:headerTimeTextAppearance">@style/TextAppearance.Material3.MaterialTimePicker.Title</item>
+    </style>
+
+
+</resources>

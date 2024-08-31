@@ -1,0 +1,28 @@
+<resources>
+    <!--Other colors-->
+    <color name="yellow_color">#FFFF00</color>
+    <color name="black_color">#000000</color>
+    <color name="red_color">#FF0000</color>
+    <color name="colorError">#B00020</color>
+
+    <!--Light colors-->
+    <color name="colorPrimary">#16C4CA</color>
+    <color name="colorPrimaryVariant">#16C4CA</color>
+    <color name="colorSecondary">#2B4141</color>
+    <color name="colorBackgroundLight">#B3D1CF</color>
+    <color name="colorSurface">#B6F5F7</color>
+    <color name="colorOnPrimary">#2B4141</color>
+    <color name="colorOnSecondary">#2B4141</color>
+    <color name="colorOnBackground">#2B4141</color>
+    <color name="colorOnSurface">#2B4141</color>
+    <!--Dark colors-->
+    <color name="colorPrimaryDark">#0DA1BF</color>
+    <color name="colorPrimaryVariantDark">#16C4CA</color>
+    <color name="colorSecondaryDark">#B6F5F7</color>
+    <color name="colorBackgroundDark">#2B4141</color>
+    <color name="colorSurfaceDark">#213131</color>
+    <color name="colorOnPrimaryDark">#C8C2AE</color>
+    <color name="colorOnSecondaryDark">#C8C2AE</color>
+    <color name="colorOnBackgroundDark">#C8C2AE</color>
+    <color name="colorOnSurfaceDark">#C8C2AE</color>
+</resources>
