@@ -65,7 +65,7 @@ reminder time can always be seen inside the app.
 <img src="readme_assets/droplet_screenshot_1.png" alt="Droplet screenshot 1" width="200" style="margin-right: 30dp;">
 <img src="readme_assets/droplet_screenshot_2.png" alt="Droplet screenshot 1" width="200" style="margin-right: 30dp;">
 <img src="readme_assets/droplet_screenshot_3.png" alt="Droplet screenshot 1" width="200" style="margin-right: 30dp;">
-<img src="readme_assets/droplet_screenshot_2.png" alt="Droplet screenshot 1" width="200">
+<img src="readme_assets/droplet_screenshot_4.png" alt="Droplet screenshot 1" width="200">
 </p>
 
 ## Contributing
