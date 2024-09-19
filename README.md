@@ -34,7 +34,7 @@ towards third party applications, the app is safe so you can just run anyway. Yo
 ### Method 2- Build yourself
 1. Clone this repo, open it in Android Studio yourself and build the apk or bundle yourself
 
-    `git clone https://github.com/Lyubo33/DropletWaterReminder.git `
+        git clone https://github.com/Lyubo33/DropletWaterReminder.git
 </div>
 <div>
 
