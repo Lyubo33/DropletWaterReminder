@@ -8,10 +8,10 @@
 <div>
 
 ## About Droplet
-    Droplet is an android water reminder app that should remind you to drink more water. It's supposed to adapt to your personal water drinking habits by taking into account your wake up time, bedtime, weight in kg and water cup size in ml to calculate reminders spread evenly through your active day. The app follows the baseline of 35ml per kilogram of bodyweight for adult people to determine the optimal water drinking goal for the day. 
+Droplet is an android water reminder app that should remind you to drink more water. It's supposed to adapt to your personal water drinking habits by taking into account your wake up time, bedtime, weight in kg and water cup size in ml to calculate reminders spread evenly through your active day. The app follows the baseline of 35ml per kilogram of bodyweight for adult people to determine the optimal water drinking goal for the day. 
     
-    Of course this app is meant to serve as a baseline towards healthier water drinking habits and is by no means intended to replace medical advice.
-    For health concerns with water drinking and related topics, please seek your doctor's advice.
+ Of course this app is meant to serve as a baseline towards healthier water drinking habits and is by no means intended to replace medical advice.
+ For health concerns with water drinking and related topics, please seek your doctor's advice.
 </div>
 <div>
 
@@ -69,7 +69,7 @@ reminder time can always be seen inside the app.
 </p>
 
 ## Contributing
-    Contributers are welcome, if you wish to do so, please submit a pull request
+Contributers are welcome, if you wish to do so, please submit a pull request
 </div>
 <div align="center">
 
