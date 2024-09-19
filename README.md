@@ -32,7 +32,7 @@ Droplet provides several features:
 towards third party applications, the app is safe so you can just run anyway. You could scan the file with play protect to verify it's safe.
 
 ### Method 2- Build yourself
-1. Clone this repo, open it in Android Studio yourself and build the apk or bundle yourself
+1. Clone this repo, open it in Android Studio and build the apk or the bundle yourself
 
     `git clone https://github.com/Lyubo33/DropletWaterReminder.git `
 </div>
